@@ -40,6 +40,8 @@ end
 - What is the space complexity of mystery1(n)? O(n) <br>
 => Because we are using hidden data structure, the System Stack. Since the stack grows with each recursion, space complexity is O(n)
 
+<br>
+
 ### Trace #2 (Adding each digit - i.e. 123 => 6)
 ```ruby
 def mystery2(n)
@@ -87,6 +89,7 @@ end
 
 p mystery2(-123) # => -6
 ```
+<br>
 
 ### Trace #3 (return 100 for positive numbers and return 200 for negative numbers)
 ```ruby
@@ -129,6 +132,7 @@ m3(-1) = 200 <br>
 - What is the time complexity of mystery3(n)? O(log n)
 
 - What is the space complexity of mystery3(n)? O(log n)
+<br>
 
 
 ### Trace #4 (b to the power of e) => i.e. 3^4 = 3 * 3^3 
@@ -161,6 +165,7 @@ m4(4, 0) = 1 <br>
 => Where n is the size of e 
 
 - What is the space complexity of mystery4(b, e)? O(n)
+<br>
 
 
 ### Trace #5 (replace one character by *)
@@ -219,6 +224,7 @@ def mystery5(s)
   end
 end
 ```
+<br>
 
 
 ### Trace #6 (Reversing sentence by word)
@@ -243,10 +249,12 @@ m6("") = ("") <br>
 
 
 - What is mystery6("Ada Developers Academy")? => "Academy Developers Ada" <br>
+```diff
 m6("Ada Developers Academy") = m6("Developers Academy") + " " + "Ada" = " Academy Developers Ada" <br>
 m6("Developers Academy") = m6("Academy") + " " + "Developers" = " Developers Academy" <br>
 m6("Academy") = m6("") + " " + "Academy" = " Academy"
 m6("") = "" <br>
+```
 
 
 - What is mystery6("Hi, there!")? => there! Hi,"
@@ -274,6 +282,8 @@ def mystery6(s)
   end
 end
 ```
+<br>
+
 
 ### Trace #7 (checking palindrome)
 ```ruby
