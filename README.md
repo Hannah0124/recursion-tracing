@@ -4,19 +4,19 @@
 
 ## Definitions
 Define the following: 
-- Recursion: A method which calls itself.  
+- <b>Recursion</b>: A method which calls itself.  
 
-- Recursive Case: The part of a recursive method which makes a recursive call (When the function calls itself)
+- <b>Recursive Case</b>: The part of a recursive method which makes a recursive call (When the function calls itself)
 
-- Base Case: A condition to stop recursion. The base case is when the function doesn’t call itself again ... so it doesn’t go into an infinite loop.
+- <b>Base Case</b>: A condition to stop recursion. The base case is when the function doesn’t call itself again ... so it doesn’t go into an infinite loop.
 
-- Activation Chain/Function Call Stack: It is the same as `call stack`. This is a 'stack data structure' which stores currently running method calls. 
+- <b>Activation Chain/Function Call Stack</b>: It is the same as `call stack`. This is a 'stack data structure' which stores currently running method calls. 
 
-- Activation Record/Function Call:  Function calls are placed on the system call stack which functions in a last-in-first-out order. The separate pieces of the Activation Chain. Every function call results in a record getting created in the stack memory.??
+- <b>Activation Record/Function Call</b>:  Function calls are placed on the system call stack which functions in a last-in-first-out order. The separate pieces of the Activation Chain. Every function call results in a record getting created in the stack memory.??
 
-- Infinite Recursion/Stack Overflow/Stack too deep: It is an error which occurs when the call stack runs out of memory. For example, in a recursice method, if there is no base case, `inifinite recursion/stack overflow` will happen.
+- <b>Infinite Recursion/Stack Overflow/Stack too deep</b>: It is an error which occurs when the call stack runs out of memory. For example, in a recursice method, if there is no base case, `inifinite recursion/stack overflow` will happen.
 
-- Tail Recursion: When the recursive call finishes, there are no more calculations left to perform. (i.e. Having calcuations inside of the parameters ??)
+- <b>Tail Recursion</b>: When the recursive call finishes, there are no more calculations left to perform. (i.e. Having calcuations inside of the parameters ??)
 
 
 ## Tracing through a recursive method. Time & Space complexity.
@@ -31,13 +31,13 @@ def mystery1(n)
 end
 ```
 
-- What is mystery1(5)? 15
-- What is mystery1(10)? 55
-- What is mystery1(0)? stack overflow error
-- What is the time complexity of mystery1(n)? O(n) <br>
+- What is mystery1(5)?<b> 15 </b>
+- What is mystery1(10)?<b> 55 </b>
+- What is mystery1(0)?<b> stack overflow error </b>
+- What is the time complexity of mystery1(n)?<b> O(n)</b> <br>
 => Since I used the number of `recursive calls`, time complexity is O(n)
 
-- What is the space complexity of mystery1(n)? O(n) <br>
+- What is the space complexity of mystery1(n)?<b> O(n)</b> <br>
 => Because we are using hidden data structure, the System Stack. Since the stack grows with each recursion, space complexity is O(n)
 
 <br>
@@ -53,26 +53,26 @@ def mystery2(n)
 end
 ```
 
-- What is mystery2(123)? => 6 </br>
+- What is mystery2(123)? => <b> 6</b></br>
 m2(123) = 3 + m2(12) = 6 </br>
 m2(12) = 2 + m2(1) = 3 </br>
 m2(1) = 1 
 
 
-- What is mystery2(9005)? => 14 </br>
+- What is mystery2(9005)? =><b> 14</b></br>
 m2(9005) = 5 + m2(900) = 14 </br>
 m2(900) = 0 + m2(90) = 9 </br>
 m2(90) = 0 + m2(9) = 9 </br>
 m2(9) = 9 </br>
 
 
-- What is mystery2(-123)? => -123
+- What is mystery2(-123)? =><b> -123</b>
 
-- What is the time complexity of mystery2(n)? => log 10 n <br>
+- What is the time complexity of mystery2(n)? =><b> log 10 n</b><br>
 =>log (base 10) of n </br>
 => Since a number was divided by 10 in a resursive call, time compleixty is "log 10 n"
 
-- What is the space complexity of mystery2(n)? => log 10 n
+- What is the space complexity of mystery2(n)? =><b> log 10 n</b>
 
 
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_ 
@@ -108,11 +108,11 @@ def mystery3(n)
 end
 ```
 
-- What is mystery3(1)? => 100 <br>
+- What is mystery3(1)? =><b> 100</b> <br>
 m3(1) = m3(0) = 100 <br>
 m3(0) = 100 <br>
 
-- What is mystery3(13)? => 100 <br>
+- What is mystery3(13)? =><b> 100</b> <br>
 m3(13) = m3(12) = 100 <br>
 m3(12) = m3(6) = 100 <br>
 m3(6) = m3(3) = 100 <br>
@@ -121,7 +121,7 @@ m3(2) = m3(1) = 100 <br>
 m3(1) = m3(0) = 100 <br>
 m3(0) = 100 <br>
 
-- What is mystery3(-6)? 200 <br>
+- What is mystery3(-6)? =><b> 200</b> <br>
 m3(-6) = m3(-3) = 200 <br>
 m3(-3) = m3(-4) = 200 <br>
 m3(-4) = m3(-2) = 200 <br>
@@ -129,9 +129,9 @@ m3(-2) = m3(-1) = 200 <br>
 m3(-1) = 200 <br>
 
 
-- What is the time complexity of mystery3(n)? O(log n)
+- What is the time complexity of mystery3(n)? => <b> O(log n)</b>
 
-- What is the space complexity of mystery3(n)? O(log n)
+- What is the space complexity of mystery3(n)? =><b> O(log n)</b>
 <br>
 
 
@@ -146,25 +146,25 @@ def mystery4(b, e)
 end
 ```
 
-- What is mystery4(10, 2)? => 100 <br>
+- What is mystery4(10, 2)? =><b> 100 </b><br>
 m4(10, 2) = 10 * m4(10, 1) = 100 <br>
 m4(10, 1) = 10 * m4(10, 0) = 10 <br>
 m4(10, 0) = 1 <br>
 
 
-- What is mystery4(4, 3)? => 64 <br>
+- What is mystery4(4, 3)? =><b> 64 </b><br>
 m4(4, 3) = 4 * m4(4, 2) = 64 <br>
 m4(4, 2) = 4 * m4(4, 1) = 16 <br>
 m4(4, 1) = 4 * m4(4, 0) = 4 <br>
 m4(4, 0) = 1 <br>
 
 
-- What is mystery4(5, 0)? 1
+- What is mystery4(5, 0)? => <b> 1</b>
 
-- What is the time complexity of mystery4(b, e)? O(n) <br> 
+- What is the time complexity of mystery4(b, e)? => <b> O(n) </b><br> 
 => Where n is the size of e 
 
-- What is the space complexity of mystery4(b, e)? O(n)
+- What is the space complexity of mystery4(b, e)? => <b> O(n)</b>
 <br>
 
 
@@ -179,13 +179,13 @@ def mystery5(s)
 end
 ```
 
-- What is mystery5("hi")? => "**" <br>
+- What is mystery5("hi")? => <b> "**"</b> <br>
 m5("hi") = * + m5("i") = ** <br>
 m5("i") = * + m5("") = * <br>
 m5("") = "" <br>
 
 
-- What is mystery5("")? =>  ""
+- What is mystery5("")? => <b> ""</b>
 
 - What is mystery5("Hi, there!")? => "**********" <br>
 m5("Hi, there!") = * + m5("i, there!") = ********** <br>
@@ -201,11 +201,11 @@ m5("!") = * + m5("") = * <br>
 m5("") = "" <br>
 
 
-- What is the time complexity of mystery5(s)? O(n) 
+- What is the time complexity of mystery5(s)? =><b> O(n)</b> 
 <br>
 => where n is the length of s
 
-- What is the space complexity of mystery5(s)? O(n^2) <br>
+- What is the space complexity of mystery5(s)? =><b>O(n^2)</b><br>
 => Because of s[1..-1] and the System Stack <br>
 => Although we created a string, not an array, it will take O(n) space <br>
 
@@ -219,7 +219,7 @@ def mystery5(s)
     if s[0].match(/[a-zA-Z]/)   
       return "*" + mystery5(s[1..-1])
     else 
-      return s[0] + mystery5(s[1..-1])  # important!
+      return s[0] + mystery5(s[1..-1]) # important!
     end 
   end
 end
@@ -242,13 +242,13 @@ def mystery6(s)
 end
 ```
 
-- What is mystery6("goodnight moon")? => "moon goodnight"<br>
+- What is mystery6("goodnight moon")? =><b> "moon goodnight"</b><br>
 m6("goodnight moon") = m6("moon") + " " + "goodnight" = " moon goodnight" <br>
 m6("moon") = m6("") + " " + "moon" = " moon" <br>
 m6("") = ("") <br>
 
 
-- What is mystery6("Ada Developers Academy")? => "Academy Developers Ada" <br>
+- What is mystery6("Ada Developers Academy")? => <b> "Academy Developers Ada"</b><br>
 ```diff
 m6("Ada Developers Academy") = m6("Developers Academy") + " " + "Ada" = " Academy Developers Ada" <br>
 m6("Developers Academy") = m6("Academy") + " " + "Developers" = " Developers Academy" <br>
@@ -257,9 +257,9 @@ m6("") = "" <br>
 ```
 
 
-- What is mystery6("Hi, there!")? => there! Hi,"
+- What is mystery6("Hi, there!")? =><b> there! Hi,"</b>
 
-- What is the time complexity of mystery6(s)? O(n) <br>
+- What is the time complexity of mystery6(s)? =><b> O(n)</b> <br>
 => O(n) where n is the length of s <br>
 => 2n became n (Recursive calls O(n) + until loop O(n))<br> 
 => It could be <b>O(n + m)</b> <br>
@@ -268,7 +268,7 @@ m6("") = "" <br>
 ** m: the number of recursive calls (the number of words)  <br>
 
 
-- What is the space complexity of mystery6(s)? => O(n * m) <br>
+- What is the space complexity of mystery6(s)? =><b> O(n * m)</b><br>
 => Because M is recursives calls + Each time we make a string, N letters long.
 
 - _Added Fun: How could we make the reversal happen by letter, instead of by word (i.e. Make it so that mystery6("goodnight moon") returned "noom thgindoog")?_
@@ -298,12 +298,12 @@ def mystery7(word)
 end
 ```
 
-- What is mystery7("cupcake")? false
-- What is mystery7("detected")? false
-- What is mystery7("eye")? true
+- What is mystery7("cupcake")? <b>false</b>
+- What is mystery7("detected")? <b>false</b>
+- What is mystery7("eye")? <b>true</b>
 
-- What is the time complexity of mystery7(word)? O(n) <br>
+- What is the time complexity of mystery7(word)? =><b> O(n)</b> <br>
  => where n is the length of word. 
 
-- What is the space complexity of mystery7(word)? O(n^2) <br>
+- What is the space complexity of mystery7(word)? =><b> O(n^2)</b> <br>
 => Every time, we create a new word + the system stack
