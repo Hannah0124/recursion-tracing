@@ -14,7 +14,7 @@ Define the following:
 
 - Activation Record/Function Call:  Function calls are placed on the system call stack which functions in a last-in-first-out order. The separate pieces of the Activation Chain. Every function call results in a record getting created in the stack memory.??
 
-- Infinite Recursion/Stack Overflow/Stack too deep:: It is an error which occurs when the call stack runs out of memory. For example, in a recursice method, if there is no base case, `inifinite recursion/stack overflow` will happen.
+- Infinite Recursion/Stack Overflow/Stack too deep: It is an error which occurs when the call stack runs out of memory. For example, in a recursice method, if there is no base case, `inifinite recursion/stack overflow` will happen.
 
 - Tail Recursion: When the recursive call finishes, there are no more calculations left to perform. (i.e. Having calcuations inside of the parameters ??)
 
@@ -34,9 +34,11 @@ end
 - What is mystery1(5)? 15
 - What is mystery1(10)? 55
 - What is mystery1(0)? stack overflow error
-- What is the time complexity of mystery1(n)? O(n) => Since I used the number of `recursive calls`, time complexity is O(n)
+- What is the time complexity of mystery1(n)? O(n) <br>
+=> Since I used the number of `recursive calls`, time complexity is O(n)
 
-- What is the space complexity of mystery1(n)? O(n) => Because we are using hidden data structure, the System Stack. Since the stack grows with each recursion, space complexity is O(n)
+- What is the space complexity of mystery1(n)? O(n) <br>
+=> Because we are using hidden data structure, the System Stack. Since the stack grows with each recursion, space complexity is O(n)
 
 ### Trace #2 (Adding each digit - i.e. 123 => 6)
 ```ruby
@@ -68,7 +70,7 @@ m2(9) = 9 </br>
 =>log (base 10) of n </br>
 => Since a number was divided by 10 in a resursive call, time compleixty is "log 10 n"
 
-- What is the space complexity of mystery2(n)? =>  log 10 n
+- What is the space complexity of mystery2(n)? => log 10 n
 
 
 - _Added Fun: How could we make `mystery2(-123)` work the way we might expect it to work instead of the way it does?_ 
@@ -155,7 +157,8 @@ m4(4, 0) = 1 <br>
 
 - What is mystery4(5, 0)? 1
 
-- What is the time complexity of mystery4(b, e)? O(n) => Where n is the size of e 
+- What is the time complexity of mystery4(b, e)? O(n) <br> 
+=> Where n is the size of e 
 
 - What is the space complexity of mystery4(b, e)? O(n)
 
@@ -193,7 +196,9 @@ m5("!") = * + m5("") = * <br>
 m5("") = "" <br>
 
 
-- What is the time complexity of mystery5(s)? O(n) => where n is the length of s
+- What is the time complexity of mystery5(s)? O(n) 
+<br>
+=> where n is the length of s
 
 - What is the space complexity of mystery5(s)? O(n^2) <br>
 => Because of s[1..-1] and the System Stack <br>
@@ -246,10 +251,11 @@ m6("") = "" <br>
 
 - What is mystery6("Hi, there!")? => there! Hi,"
 
-- What is the time complexity of mystery6(s)? O(n) => O(n) where n is the length of s <br>
-=> Recursive calls O(n) + until loop O(n) => 2n became n <br> 
-=> It could be O(n + m) <br>
-=> Because of the following reasons  <br>
+- What is the time complexity of mystery6(s)? O(n) <br>
+=> O(n) where n is the length of s <br>
+=> 2n became n (Recursive calls O(n) + until loop O(n))<br> 
+=> It could be <b>O(n + m)</b> <br>
+=> Because of the following reasons: <br>
 ** n: the length of s   <br>
 ** m: the number of recursive calls (the number of words)  <br>
 
@@ -286,7 +292,8 @@ end
 - What is mystery7("detected")? false
 - What is mystery7("eye")? true
 
-- What is the time complexity of mystery7(word)? O(n) => where n is the length of word. 
+- What is the time complexity of mystery7(word)? O(n) <br>
+ => where n is the length of word. 
 
 - What is the space complexity of mystery7(word)? O(n^2) <br>
 => Every time, we create a new word + the system stack
